@@ -97,6 +97,7 @@
 				document.querySelector("#pp").addEventListener("click", function(){
 					if(window.location.hash == ''){window.location.hash = "0"}
 					window.location.hash = Number(window.location.hash.replace("#",""))-1
+					if(Number(window.location.hash.replace("#",""))<0){window.location.hash = "0"}
 					if(window.location.hash == '#0'){history.pushState(null, null, ' ')}
 				})
 			</script>
