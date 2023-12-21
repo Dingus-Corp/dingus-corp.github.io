@@ -58,14 +58,15 @@
 				background:#0E0C0F;
 				width:100vw;
 			}
-			div[flexgrid]{
-				display: flex;
-				flex-wrap: wrap;
-				gap: 10px; /* Adjust the gap between items as needed */
+			*[gridbox]{
+				display:inline-block;
+				padding:10px;
+				border-radius:5px;
+				border: 2px solidrgba(255, 255, 255, 0.16);
 			}
-			div[flexgrid] > *{
-				flex: 0 0 calc(33.33% - 10px);
-				margin-bottom:10px;
+			*[gridbox]{
+				border: 5px solidrgba(255, 255, 255, 1);
+				transform: scale(2);
 			}
 		</style>
 	<head/>
@@ -78,25 +79,23 @@
 			</div><br>
 			<div class="page" id="1">
 				<h1><u>Who we are</u></h1>
-				<div flexgrid">
-					<div>
-						<img src="https://placehold.co/100x100">
-						<h3>Yannick</h3>
-						<i>unset</i>
-						<h5 style="text-align:center">CEO<br>Hardware<br>CAD Designer</h5>
-					</div>
-					<div style="display:inline-block">
-						<img src="https://placehold.co/100x100">
-						<h3>Bastien</h3>
-						<i>unset</i>
-						<h5 style="text-align:center">Lead Programmer</h5>
-					</div>
-					<div style="display:inline-block">
-						<img src="https://avatars.githubusercontent.com/u/47910472?s=100&v=4">
-						<h3>Fox</h3>
-						<i>they/she/he</i>
-						<h5 style="text-align:center">Programmer, <small><i>UI/UX Designer?</i></small></h5>
-					</div>
+				<div gridbox>
+					<img src="https://placehold.co/100x100">
+					<h3>Yannick</h3>
+					<i>unset</i>
+					<h5 style="text-align:center">CEO<br>Hardware<br>CAD Designer</h5>
+				</div><br>
+				<div style="display:inline-block">
+					<img src="https://placehold.co/100x100">
+					<h3>Bastien</h3>
+					<i>unset</i>
+					<h5 style="text-align:center">Lead Programmer</h5>
+				</div>
+				<div style="display:inline-block">
+					<img src="https://avatars.githubusercontent.com/u/47910472?s=100&v=4">
+					<h3>Fox</h3>
+					<i>they/she/he</i>
+					<h5 style="text-align:center">Programmer, <small><i>UI/UX Designer?</i></small></h5>
 				</div>
 			</div>
 			<div bottomBar>
