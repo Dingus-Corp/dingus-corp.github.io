@@ -1,0 +1,104 @@
+<html>
+	<head>
+	  <title>DingusCorp</title>
+	  <link rel="icon" 
+	        type="image/png" 
+	        href="https://avatars.githubusercontent.com/u/154478474?s=200&v=4" />
+		<style>
+			body{
+				height:100vh !important;
+				width:100vw;
+				align-text:center;
+				color:#FEFEFE; 
+				background:#0E0C0F;
+				font-family:Monospace;
+				
+				font-size: large;
+				margin:0px;
+				overflow-x:hidden;
+				overflow-y:hidden;
+			}
+			img{
+				box-shadow: 0 1px 1px rgba(0,0,0,.075)
+			}
+			div.page{
+				width:100vw !important;
+				height:100vh !important;
+				min-width:100vw !important;
+				min-height:100vh !important;
+				text-align:center;
+			}
+			.page#0 >img{
+				padding-top:50px;
+			}
+			button[bottomBtn]{
+				font-size: 30px;
+				background:none;
+				outline:none;
+				border:0px;
+				color:white;
+				position:sticky;
+				bottom:0px;
+				align-self:center;
+				background:#0E0C0F;
+			}
+			div[bottomBar]{
+				font-size: 30px;
+				background:none;
+				outline:none;
+				border:0px;
+				color:white;
+				position:sticky;
+				bottom:0px;
+				padding-top:10px;
+				padding-bottom:10px;
+				align-self:center;
+				z-index:10000;
+				background:#0E0C0F;
+				width:100vw;
+			}
+		</style>
+	<head/>
+	<body>
+		<center>
+			<div class="page" id="0">	
+				<img src="https://avatars.githubusercontent.com/u/154478474?s=200&v=4" style="width:30vw;"><br>
+				<h1>DingusCorp</h1><br>
+				<h2>👋 We are DingusCorp.</h2><br>
+			</div><br>
+			<div class="page" id="1">
+				<h1><u>Who we are</u></h1>
+				<div>
+					<img src="https://placehold.co/100x100">
+					<h3>Yannick</h3>
+					<h5>Short description</h5>
+				</div>
+				<div style="display:inline-block">
+					<img src="https://placehold.co/100x100">
+					<h3>Bastien</h3>
+					<h5>Short description</h5>
+				</div>
+				<div style="display:inline-block">
+					<img src="https://placehold.co/100x100">
+					<h3>Fox</h3>
+					<h5>Short description</h5>
+				</div>
+			</div>
+			<div bottomBar>
+				<button id="pp" bottomBtn onclick="">🠉</button><button id="np" bottomBtn>🠋</button>
+			</div>
+			<script>
+				document.querySelector("#np").addEventListener("click", function(){
+					if(window.location.hash == ''){window.location.hash = "0"}
+					window.location.hash = Number(window.location.hash.replace("#",""))+1
+					if(window.location.hash == '#0'){history.pushState(null, null, ' ')}
+				})
+				document.querySelector("#pp").addEventListener("click", function(){
+					if(window.location.hash == ''){window.location.hash = "0"}
+					window.location.hash = Number(window.location.hash.replace("#",""))-1
+					if(window.location.hash == '#0'){history.pushState(null, null, ' ')}
+				})
+			</script>
+		</center>
+	</body>
+</html>
