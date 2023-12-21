@@ -93,11 +93,12 @@
 					if(window.location.hash == ''){window.location.hash = "0"}
 					window.location.hash = Number(window.location.hash.replace("#",""))+1
 					if(window.location.hash == '#0'){history.pushState(null, null, ' ')}
+					document.querySelector("#pp").disabled = false
 				})
 				document.querySelector("#pp").addEventListener("click", function(){
 					if(window.location.hash == ''){window.location.hash = "0"}
 					window.location.hash = Number(window.location.hash.replace("#",""))-1
-					if(Number(window.location.hash.replace("#",""))<0){window.location.hash = "0"}
+					if(Number(window.location.hash.replace("#",""))<0){window.location.hash = "0";document.querySelector("#pp").disabled = true}
 					if(window.location.hash == '#0'){history.pushState(null, null, ' ')}
 				})
 			</script>
